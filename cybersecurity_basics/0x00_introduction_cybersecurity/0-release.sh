@@ -1,2 +1,2 @@
 #!/bin/bash
-cat /etc/issue
+lsb_release -i -s
