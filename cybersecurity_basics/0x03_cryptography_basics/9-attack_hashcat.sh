@@ -1,0 +1,1 @@
+hashcat -a 1 -m 0 -o 9-password.txt hash.txt w1.txt w2.txt
