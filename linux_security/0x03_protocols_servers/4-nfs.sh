@@ -1,3 +1,3 @@
 #!/bin/bash
-showmount -e "$1" | grep -E '^\S+\s+\*' | awk '{print $1 " (everyone)"}'
-showmount -e "$1" | grep -v '*'
+showmount -e "$1" 2>/dev/null | awk '/\*/ {print $1 " (everyone)"; next} {print}'
+
