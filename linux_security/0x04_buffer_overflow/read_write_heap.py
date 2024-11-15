@@ -49,6 +49,7 @@ def main():
                                 data[index + len(search_string):]
                             mem_file.seek(start)
                             mem_file.write(new_data)
+                            print(f"Replaced '{search_string.decode()}' with '{replace_string.decode()}'")
                             sys.exit(0)
 
         print("Error: String not found in heap")
