@@ -7,12 +7,14 @@ Module docs.
 import sys
 import os
 
+
 def usage():
     """Documentation :
     usage function docs.
     """
     print("Usage: read_write_heap.py pid search_string replace_string")
     sys.exit(1)
+
 
 def main():
     """Documentation :
@@ -43,7 +45,8 @@ def main():
 
                         index = data.find(search_string)
                         if index != -1:
-                            new_data = data[:index] + replace_string + data[index + len(search_string):]
+                            new_data = data[:index] + replace_string + \
+                                data[index + len(search_string):]
                             mem_file.seek(start)
                             mem_file.write(new_data)
                             sys.exit(0)
@@ -53,6 +56,7 @@ def main():
     except Exception as e:
         print(f"Error: {e}")
         sys.exit(1)
+
 
 if __name__ == "__main__":
     main()
