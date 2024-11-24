@@ -1,2 +1,2 @@
 #!/bin/bash
-grep "Accepted" auth.log | awk '{print $9}' | sort | uniq | tr '\n' ',' | sed 's/,$//'
+grep 'new user' auth.log | awk '{print $8}' | awk -F= '{print $2}' | tr -d ',' | sort | paste -sd',' -
