@@ -1,2 +1,2 @@
 #!/bin/bash
-sudo nmap --script="http-vuln*,mysql-vuln*,ftp-vuln*,smtp-vuln*" $1 -oN vulnerability_scan_results.txt
+sudo nmap -sC -sV -O --traceroute --script "banner,ssl-enum-ciphers,default,smb-enum-domains" $1 -oN service_enumeration_results.txt
