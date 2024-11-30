@@ -1,2 +1,2 @@
 #!/bin/bash
-awk -F: '{if ($3 >= 1000 && $3 < 65534) print $1}' /etc/passwd | tr '\n' ',' | sed 's/,$/\n/'
+grep 'new user' auth.log | awk '{print $8}' | awk -F= '{print $2}' | tr -d ',' | sort | paste -sd',' -
