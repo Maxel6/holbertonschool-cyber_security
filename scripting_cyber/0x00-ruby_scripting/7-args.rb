@@ -5,6 +5,7 @@ def print_arguments
     else
 
       # Print each argument with its index
+      puts "Arguments:"
       ARGV.each_with_index do |arg, index|
         puts "#{index + 1}. #{arg}"
       end
