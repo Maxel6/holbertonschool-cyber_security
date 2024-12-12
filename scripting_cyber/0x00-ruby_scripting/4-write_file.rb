@@ -20,7 +20,7 @@ def merge_json_files(file1_path, file2_path)
 
     # Write the result back to file2_path
     File.write(file2_path, JSON.pretty_generate(merged_json))
-    puts "Merged JSON written to #{file2_path}."
+    puts "Merged JSON written to #{file2_path}"
 
   rescue Errno::ENOENT
     puts "Error: One of the files is missing."
