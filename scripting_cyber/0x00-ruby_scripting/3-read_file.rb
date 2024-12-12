@@ -20,4 +20,4 @@ def count_user_ids(path)
   user_id_count.each do |user_id, count|
     puts "#{user_id}: #{count}"
   end
-ends 
+end
